@@ -5,7 +5,7 @@ import {
   View,
   TextInput,
   TouchableHighlight,
-  Alert,
+  Alert
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
@@ -31,7 +31,7 @@ const RegisterScreen = ({navigation}) => {
         } else {
           AsyncStorage.setItem(userName, password, (err, result) => {
             Alert.alert(`${userName} account created`);
-            navigate.navigate('Home');
+            navigation.navigate('Home');
           });
         }
       });
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   inputs: {
-    width: '80',
+    width: '80%',
     marginTop: 12,
     borderWidth: 1,
     height: 45,
