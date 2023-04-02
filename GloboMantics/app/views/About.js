@@ -1,47 +1,37 @@
-import {StyleSheet, Text, ScrollView, Image} from 'react-native';
+import { StyleSheet, Text, ScrollView, Image } from 'react-native';
 
-//Backtics to use multi-line string
-const aboutGlobo = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in diam massa. Aliquam hendrerit maximus blandit.In cursus libero tristique velit volutpat, sed sagittis quam fermentum. Duis iaculis purus dui, id mollis ex luctus nec. Praesent pretium enim interdum dui semper volutpat.`;
+const aboutGlobo = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultrices mattis iaculis. Phasellus sit amet nibh blandit, blandit, pulvinar arcu id, elementum dolor. Aenean ut risus urna. Nulla accumsan consectetur lectus ut vestibulum.`
 
-const whatGlobo = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in diam massa. Aliquam hendrerit maximus blandit.In cursus libero tristique velit volutpat, sed sagittis quam fermentum. Duis iaculis purus dui, id mollis ex luctus nec. Praesent pretium enim interdum dui semper volutpat.`;
+const whatGlobo = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultrices mattis iaculis. Phasellus sit amet nibh blandit, blandit, pulvinar arcu id, elementum dolor. Aenean ut risus urna. Nulla accumsan consectetur lectus ut vestibulum.`
 
 const AboutScreen = () => {
-  return (
-    <ScrollView style={StyleSheet.container}>
-      <Image
-        style={StyleSheet.pic}
-        source={require('../components/img/arch640.jpg')}
-      />
-      <Text style={StyleSheet.aboutTitle}>Who We are</Text>
-      <Text style={StyleSheet.aboutText}>{aboutGlobo}</Text>
-
-      <Image
-        style={StyleSheet.pic}
-        source={require('../components/img/computer640.jpg')}
-      />
-       <Text style={StyleSheet.aboutTitle}>Who We do</Text>
-      <Text style={StyleSheet.aboutText}>{whatGlobo}</Text>
-    </ScrollView>
-  );
+    return (
+        <ScrollView style={styles.container}>
+            <Image style={styles.pics} source={require('../components/img/arch640.jpg')}/>    
+            <Text style={styles.aboutTitle}>Who We Are</Text>
+            <Text style={styles.aboutText}>{aboutGlobo}</Text>
+            <Image style={styles.pics} source={require('../components/img/computer640.jpg')}/>
+            <Text style={styles.aboutTitle}>What We Do</Text>
+            <Text style={styles.aboutText}>{whatGlobo}</Text>
+        </ScrollView>    
+    );    
 };
-
-
-//Styles for About
 const styles = StyleSheet.create({
-    container:{
-        paddingTop:20
+    container: {
+        paddingTop: 20,
+        backgroundColor:'#35605a'
     },
-    pic:{
-        height:300
+    pics: {
+        height: 300
     },
-    aboutTitle:{
-        paddingTop:10,
-        textAlign:'center'
+    aboutTitle: {
+        paddingTop: 10,
+        textAlign: 'center'
     },
-    aboutText:{
-        paddingBottom:20,
-        paddingLeft:10,
-        paddingRight:10
+    aboutText: {
+        paddingBottom: 20,
+        paddingLeft: 10,
+        paddingRight: 10
     }
 });
 

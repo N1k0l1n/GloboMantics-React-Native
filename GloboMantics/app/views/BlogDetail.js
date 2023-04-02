@@ -41,8 +41,8 @@ const BlogDetail = ({route, navigation})=> {
     };
 
     const blogClassStyles = { 
-        blTitle: { marginLeft: 'auto', marginRight: 'auto' },
-        blContent: { marginLeft: 10, marginRight: 10 },
+        blTitle: { marginLeft: 'auto', marginRight: 'auto',color:'#000000' },
+        blContent: { marginLeft: 10, marginRight: 10, backgroundColor:'#35605a' },
         blBack: { marginLeft: 'auto', marginRight: 'auto', paddingBottom: 20 }
     };
 
