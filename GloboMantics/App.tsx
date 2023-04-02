@@ -14,31 +14,32 @@ const Stack = createNativeStackNavigator();
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen
-          name="Register"
-          component={RegisterScreen}
+      <Stack.Navigator
+        initialRouteName='Home'
+      >
+        <Stack.Screen 
+          name='Register' 
+          component={RegisterScreen} 
+          options={{headerShown:false}}
+        />  
+        <Stack.Screen 
+          name='Login' 
+          component={LoginScreen} 
           options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="Login"
-          component={LoginScreen}
-          options={{headerShown: false}}
-        />
-
-        <Stack.Screen
-          name="About"
+        />  
+        <Stack.Screen 
+          name='About'
           component={AboutScreen}
-          options={{title: 'About Us'}}
+          options={{title: 'About Us'}} 
         />
-        <Stack.Screen
-          name="Home"
+        <Stack.Screen 
+          name='Home'
           component={HomeScreen}
-          options={{header: ()=><GloboHeader/>}}
+          options={{header: ()=><GloboHeader />}}
         />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
+      </Stack.Navigator>    
+    </NavigationContainer>    
+  );  
 };
 
 export default App;
