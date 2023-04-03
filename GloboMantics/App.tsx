@@ -7,6 +7,8 @@ import LoginScreen from './app/views/Login';
 import GloboHeader from './app/components/Header';
 import Blog from './app/views/Blog';
 import BlogDetail from './app/views/BlogDetail';
+import QuizFinish from './app/views/QuizFinish';
+import Quiz from './app/views/Quiz';
 
 //returns an object with 2 properties (screen, navigator)
 const Stack = createNativeStackNavigator();
@@ -19,6 +21,16 @@ const App = () => {
       <Stack.Navigator
         initialRouteName='Home'
       >
+           <Stack.Screen 
+          name='QuizFinish' 
+          component={QuizFinish} 
+          options={{headerShown: false}}
+        /> 
+        <Stack.Screen 
+          name='Quiz'
+          component={Quiz}
+          options={{title:''}}
+        /> 
         <Stack.Screen
         name='BlogDetail'
         component={BlogDetail}
