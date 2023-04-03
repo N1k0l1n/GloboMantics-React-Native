@@ -1,64 +1,46 @@
-import { 
-    StyleSheet, 
-    View, 
-    TouchableOpacity, 
-    Text, 
-    Alert 
-} from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import {StyleSheet, View, TouchableOpacity, Text, Alert} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 
 const Menu = () => {
-    const navigation = useNavigation();
-    
-    return (
-        <View style={styles.container}>
-            <View style={styles.buttonRow}>
-                
-                <TouchableOpacity 
-                    style={styles.buttonStyles} 
-                    onPress={()=>navigation.navigate('Login')}
-                >
-                    <Text style={styles.buttonText}>Lessons</Text>
-                </TouchableOpacity>
-                <TouchableOpacity 
-                    style={styles.buttonStyles} 
-                    onPress={()=>navigation.navigate('Quiz')}
-                >
-                    <Text style={styles.buttonText}>Quiz</Text>
-                </TouchableOpacity>    
-            
-            </View>
+  const navigation = useNavigation();
 
-            <View style={[styles.buttonRow, styles.border]}>
+  return (
+    <View style={styles.container}>
+      <View style={styles.buttonRow}>
+        <TouchableOpacity
+          style={styles.buttonStyles}
+          onPress={() => navigation.navigate('Videos')}>
+          <Text style={styles.buttonText}>Lessons</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.buttonStyles}
+          onPress={() => navigation.navigate('Quiz')}>
+          <Text style={styles.buttonText}>Quiz</Text>
+        </TouchableOpacity>
+      </View>
 
-                <TouchableOpacity 
-                    style={styles.buttonStyles} 
-                    onPress={()=>navigation.navigate('Blog')}
-                >
-                    <Text style={styles.buttonText}>Blog</Text>
-                </TouchableOpacity>
-                <TouchableOpacity 
-                    style={styles.buttonStyles} 
-                    onPress={()=>navigation.navigate('Register')}
-                >
-                    <Text style={styles.buttonText}>Register</Text>
-                </TouchableOpacity>
+      <View style={[styles.buttonRow, styles.border]}>
+        <TouchableOpacity
+          style={styles.buttonStyles}
+          onPress={() => navigation.navigate('Blog')}>
+          <Text style={styles.buttonText}>Blog</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.buttonStyles}
+          onPress={() => navigation.navigate('Register')}>
+          <Text style={styles.buttonText}>Register</Text>
+        </TouchableOpacity>
+      </View>
 
-            </View>
-
-            <View style={styles.bottomRow}>
-
-                <TouchableOpacity 
-                    style={styles.bottomButtonStyles} 
-                    onPress={()=>navigation.navigate('About')}
-                >
-                    <Text style={styles.buttonText}>About GloboMantics</Text>
-                </TouchableOpacity>
-
-            </View>
-
-        </View>
-    );
+      <View style={styles.bottomRow}>
+        <TouchableOpacity
+          style={styles.bottomButtonStyles}
+          onPress={() => navigation.navigate('About')}>
+          <Text style={styles.buttonText}>About GloboMantics</Text>
+        </TouchableOpacity>
+      </View>
+    </View>
+  );
 };
 
 const styles = StyleSheet.create({
